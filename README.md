@@ -11,7 +11,7 @@ The script is written in Python 3.
 - Selenium WebDrivers can be found [here](https://www.selenium.dev/documentation/en/webdriver/driver_requirements/)
 - Required dependencies can be found [here](https://github.com/GeekMuch/autoapplyvaxx/blob/master/requirements.txt)
   - To install the requirements use:  
-    ```python3 pip install -r requirements.txt```
+    ```python3 -m pip install -r requirements.txt```
 
 ## Runnig the script
 To run the script, change the directory to repository directory, and run the ```./vaxx.py```.  
