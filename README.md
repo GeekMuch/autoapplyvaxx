@@ -24,7 +24,7 @@ Clone and change directory
 ``` pip3 install -r /path/to/requirements.txt ```  
 
 and run script (depends on setup of python)  
-```python3 vaxx.py```
+```python3 vaxx.py```  
 or  
 ```python vaxx.py```
 
