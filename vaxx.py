@@ -17,7 +17,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 from tqdm import tqdm
 
 # Install Webdriver
-ChromeDriverManager().install()
+chromeDriver = ChromeDriverManager().install()
 
 # Link til survey
 url = 'https://www.regionh.dk/presse-og-nyt/pressemeddelelser-og-nyheder/Sider/Tilmelding-til-at-modtage-overskydende-vaccine-mod-COVID-19.aspx'
@@ -33,7 +33,7 @@ url = 'https://www.regionh.dk/presse-og-nyt/pressemeddelelser-og-nyheder/Sider/T
 fuldnavn = 'A D'
 
 # Skriv venligst din alder / Age
-alder = '30' 
+alder = '42' 
 
 # Skriv venligst din adresse (Vej, vejnummer og evt. opgang/etage) / address (street, house nr etc.)
 adresse = 'mælkevejen 42 1tv'
@@ -57,10 +57,6 @@ vaxxplace = '/html/body/div/form/div[1]/div/table/tbody/tr[2]/td/div/span[5]/lab
 #vaxxplace = '/html/body/div/form/div[1]/div/table/tbody/tr[2]/td/div/span[8]/label' # Vaccinationscenter Birkerød, Søndervangen 44, 3460 Birkerød
 
 
-# Global variables 
-refreshCounter = 0
-counter = 0
-
 def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
 
@@ -77,7 +73,7 @@ def init_Driver():
     opt = webdriver.ChromeOptions()
     opt.add_experimental_option("detach", True)
     
-    driver = webdriver.Chrome(options=opt) #options=options
+    driver = webdriver.Chrome(executable_path=chromeDriver, options=opt) #options=options
     
     driver.set_window_size(1024, 900)
 
@@ -86,15 +82,15 @@ def init_Driver():
     return driver
 
 def autopart():
-    global refreshCounter
-    timer = 10#86400 # 24 hours = 86400 seconds 
+    counter = 0
+    timer = 86400 # 24 hours = 86400 seconds 
 
-    print("\nNumber of auto fills completed: {0}\n".format(refreshCounter))
+    print("\nNumber of auto fills completed: {0}\n".format(counter))
     print("\nTime left before next auto fill\n")
     for char in tqdm(range(timer), unit='s', unit_divisor=60):
         time.sleep(1)
         #progress.set_description("Next refresh..") # 900 seconds = 15 minutes, 780s = 13 min
-    refreshCounter += 1
+    counter += 1
     clear_screen()    
     submitter(url)
 

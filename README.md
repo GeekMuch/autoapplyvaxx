@@ -19,8 +19,13 @@ Lazy ? here you go!
 Clone and change directory  
 ```git clone https://github.com/GeekMuch/autoapplyvaxx.git && cd autoapplyvaxx ```  
 
-and run script (depends on setup for python)  
+Install requirements modules for python
+``python3 -m pip install -r requirements.txt```
+
+Run script (depends on setup for python)  
 ```python3 vaxx.py```  
 or  
 ```python vaxx.py```
 
+
+Idk whatsup with this shit 
