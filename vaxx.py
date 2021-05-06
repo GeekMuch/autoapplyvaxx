@@ -13,7 +13,11 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.service import Service 
 from selenium.webdriver.chrome.options import Options  
+from webdriver_manager.chrome import ChromeDriverManager
 from tqdm import tqdm
+
+# Install Webdriver
+ChromeDriverManager().install()
 
 # Link til survey
 url = 'https://www.regionh.dk/presse-og-nyt/pressemeddelelser-og-nyheder/Sider/Tilmelding-til-at-modtage-overskydende-vaccine-mod-COVID-19.aspx'
@@ -72,15 +76,7 @@ def init_Driver():
 
     opt = webdriver.ChromeOptions()
     opt.add_experimental_option("detach", True)
-    os = platform.system()
-
-    if os == 'Darwin':
-        s=Service("chromedriver_osx")
-    elif os == 'Windows':
-        s=Service("chromedriver.exe")
-    else:
-        s=Service("chromedriver_linux")
-        
+    
     driver = webdriver.Chrome(options=opt) #options=options
     
     driver.set_window_size(1024, 900)
