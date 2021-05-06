@@ -72,8 +72,8 @@ def init_Driver():
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-default-apps")
     options.add_argument("--no-first-run")
-    # options.add_experimental_option("detach", True)
 
+    # for debug
     opt = webdriver.ChromeOptions()
     opt.add_experimental_option("detach", True)
     
@@ -87,9 +87,9 @@ def init_Driver():
 
 def autopart():
     global refreshCounter
-    timer = 10#86400
+    timer = 10#86400 # 24 hours = 86400 seconds 
 
-    print("\nNumber of auto fills: {0}\n".format(refreshCounter))
+    print("\nNumber of auto fills completed: {0}\n".format(refreshCounter))
     print("\nTime left before next auto fill\n")
     for char in tqdm(range(timer), unit='s', unit_divisor=60):
         time.sleep(1)
@@ -169,3 +169,4 @@ def submitter(url):
 
 if __name__ == "__main__":
     submitter(url)
+    # Made with love, by request from J.K. Hellmers <3 

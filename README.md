@@ -1,7 +1,7 @@
 # Auto apply for vaxx
 
 ## Description
-Enjoy the spaghetti! This will auto fill the survery for the excess vaccination with your information so that you get on the list. Good luck ! and happy VaxX 
+The script will auto-fill the survey for the excess vaccinations with your information and get you on the list. Good luck!  Happy VaxX!  
 
 ## Requirements
 The script is written in Python 3.
@@ -19,9 +19,6 @@ Lazy ? here you go!
   
 Clone and change directory  
 ```git clone https://github.com/GeekMuch/autoapplyvaxx.git && cd autoapplyvaxx ```  
-
-(If requirements not installed and remember WebDrivers!)   
-``` pip3 install -r /path/to/requirements.txt ```  
 
 and run script (depends on setup for python)  
 ```python3 vaxx.py```  
