@@ -73,7 +73,7 @@ def init_Driver():
     opt = webdriver.ChromeOptions()
     opt.add_experimental_option("detach", True)
     if platform.system() == 'Darwin':
-        s=Service("chromedriver_mac")
+        s=Service("chromedriver_osx")
     elif platform.system() == 'Windows':
         s=Service("chromedriver.exe")
     else:
