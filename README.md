@@ -7,8 +7,7 @@ The script will auto-fill the survey for the excess vaccinations with your infor
 The script is written in Python 3.
 
 - [Any version of Python3](https://www.python.org/downloads/)
-- pip package management system [here](https://pip.pypa.io/en/stable/installing/)
-- Selenium WebDrivers can be found [here](https://www.selenium.dev/documentation/en/webdriver/driver_requirements/)
+- pip package management system. [Install here](https://pip.pypa.io/en/stable/installing/)
 - Required dependencies can be found [here](https://github.com/GeekMuch/autoapplyvaxx/blob/master/requirements.txt)
   - To install the requirements use:  
     ```python3 -m pip install -r requirements.txt```
