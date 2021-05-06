@@ -72,12 +72,14 @@ def init_Driver():
 
     opt = webdriver.ChromeOptions()
     opt.add_experimental_option("detach", True)
-    if platform.system() == 'Darwin':
+    os = platform.system()
+
+    if os == 'Darwin':
         s=Service("chromedriver_osx")
-    elif platform.system() == 'Windows':
+    elif os == 'Windows':
         s=Service("chromedriver.exe")
     else:
-        s=Service("chromedriver:linux")
+        s=Service("chromedriver_linux")
         
     driver = webdriver.Chrome(options=opt) #options=options
     
