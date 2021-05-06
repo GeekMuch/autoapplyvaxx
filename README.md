@@ -23,7 +23,7 @@ Clone and change directory
 (If requirements not installed and remember WebDrivers!)   
 ``` pip3 install -r /path/to/requirements.txt ```  
 
-and run script (depends on setup of python)  
+and run script (depends on setup for python)  
 ```python3 vaxx.py```  
 or  
 ```python vaxx.py```
