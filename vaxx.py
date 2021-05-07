@@ -158,8 +158,8 @@ def submitter(url):
     # Sends end to quit
     time.sleep(0.1)
     nxt = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '/html/body/div/form/div[2]/div[3]/input')))
-    driver.close()
-    # nxt.click() 
+    # driver.close()
+    nxt.click() 
     
     autopart()
 
