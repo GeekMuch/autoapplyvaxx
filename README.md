@@ -14,7 +14,7 @@ The script is written in Python 3.
 
 ## Runnig the script
 To run the script, change the directory to repository directory, and run the ```./vaxx.py```.  
-Lazy ? here you go!  
+Lazy ? here you go! CopyPasta!  
   
 Clone and change directory  
 ```git clone https://github.com/GeekMuch/autoapplyvaxx.git && cd autoapplyvaxx ```  
@@ -28,4 +28,3 @@ or
 ```python vaxx.py```
 
 
-Idk whatsup with this shit 
